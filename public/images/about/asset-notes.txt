@@ -1,0 +1,6 @@
+Reference photographs downloaded from the public FIND Real Estate homepage to match the supplied About section screenshots.
+chevron-1.jpg: https://www.findrealestate.com/_next/static/media/1.e7a1ff18.jpg
+chevron-2.jpg: https://www.findrealestate.com/_next/static/media/2.58bf2fb8.jpg
+chevron-3.jpg: https://www.findrealestate.com/_next/static/media/3.483e04ae.jpg
+chevron-4.jpg: https://www.findrealestate.com/_next/static/media/4.ea5fa732.jpg
+These reference visuals do not represent Noor agents, clients, or verified properties.

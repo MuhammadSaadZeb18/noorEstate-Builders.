@@ -1,0 +1,6 @@
+Preview thumbnails for the YouTube Shorts supplied by Noor Estate & Builders.
+Downloaded from https://i.ytimg.com/vi/{video-id}/maxresdefault.jpg (1280 x 720), saved as {video-id}-hd.jpg.
+Full-resolution previews are served directly to avoid undersizing the landscape source before it is cropped into a portrait frame.
+Video IDs: DX93e1CqEnM, 1mfzunRVEJU, ZL2MfyT-R0k, yg71Yx3dF7Y, Q_BAtMHkXb4.
+Titles retrieved from YouTube oEmbed; trailing hashtags omitted in display titles.
+Video playback uses the original YouTube privacy-enhanced embedded player, loaded only after a play click.

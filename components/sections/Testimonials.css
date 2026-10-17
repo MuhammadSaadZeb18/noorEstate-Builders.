@@ -1,0 +1,16 @@
+#testimonials .section-number,
+#testimonials .testimonial-story > .eyebrow,
+#testimonials .story-attribution,
+#testimonials .content-disclosure {
+  color: #aebba3;
+}
+
+#testimonials .section-dot { background: #a5b698; }
+#testimonials .quote-mark { color: #a5b698; }
+#testimonials .testimonial-bottom { border-color: #4d5b44; }
+#testimonials .round-arrow { color: #e3e8de; border-color: #717e65; }
+
+/* Reserve the tallest quote's space at every viewport width and font size. */
+#testimonials .testimonial-stage { display: grid; min-width: 0; }
+#testimonials .testimonial-stage > .testimonial-story { grid-area: 1 / 1; min-width: 0; }
+#testimonials .testimonial-measure { visibility: hidden; pointer-events: none; }

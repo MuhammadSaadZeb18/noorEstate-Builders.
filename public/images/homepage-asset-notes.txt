@@ -1,0 +1,11 @@
+Local illustrative photographs sourced from Unsplash. These are editorial placeholders, not verified agent identities or exact neighborhood views.
+
+locations/brooklyn.jpg: https://images.unsplash.com/photo-1518391846015-55a9cc003b25
+locations/manhattan.jpg: https://images.unsplash.com/photo-1519501025264-65ba15a82390
+locations/queens.jpg: https://images.unsplash.com/photo-1522083165195-3424ed129620
+locations/hudson-valley.jpg: https://images.unsplash.com/photo-1448375240586-882707db888b
+team/alex.jpg: https://images.unsplash.com/photo-1472099645785-5658abf4ff4e
+team/jamie.jpg: https://images.unsplash.com/photo-1580489944761-15a19d654956
+team/sam.jpg: https://images.unsplash.com/photo-1500648767791-00dcc994a43e
+
+Downloaded with auto=format&fit=crop&w=1100&q=85. Team profiles are fictional and identified as demonstration profiles on the page. Testimonials are sample copy, identified as unverified illustrative stories. Replace with approved business content before launch.

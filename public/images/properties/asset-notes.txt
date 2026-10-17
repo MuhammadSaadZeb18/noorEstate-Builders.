@@ -1,0 +1,11 @@
+Illustrative photography downloaded from Unsplash for the local demonstration inventory.
+These images do not verify an actual address or listing. Cover and gallery photography is shared across demonstration records, as disclosed in the collection and detail overlay.
+
+garden-house.jpg: https://images.unsplash.com/photo-1600596542815-ffad4c1539a9
+city-apartment.jpg: https://images.unsplash.com/photo-1600607687920-4e2a09cf159d
+park-residence.jpg: https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde
+courtyard-home.jpg: https://images.unsplash.com/photo-1600585154340-be6161a56a0c
+living-room.jpg: https://images.unsplash.com/photo-1600210492486-724fe5c67fb0
+kitchen.jpg: https://images.unsplash.com/photo-1600566752355-35792bedcfea
+
+Downloaded with auto=format&fit=crop&w=1400&q=85. Replace alongside sample property records with approved listing photography before presenting live inventory.

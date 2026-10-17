@@ -1,0 +1,37 @@
+.projects-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.project-card { position: relative; min-height: 560px; aspect-ratio: 462 / 550; isolation: isolate; overflow: hidden; border-radius: 0; color: white; background: #293226; }
+.project-card > img { object-fit: cover; z-index: -2; transition: transform .6s ease; }
+.project-card::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, #0003, transparent 30%, #0009 62%, #000c); }
+.project-card:hover > img { transform: scale(1.035); }
+.project-badges { position: absolute; inset: 24px 24px auto; display: flex; flex-wrap: wrap; gap: 8px; }
+.project-badges > span { border: 1px solid #ffffff75; background: #ffffff20; backdrop-filter: blur(10px); padding: 9px 11px; font-size: 13px; font-weight: 600; }
+.project-card-copy { position: absolute; inset: auto 24px 24px; }
+.project-card h3 { font-size: clamp(21px, 1.6vw, 30px); font-weight: 500; line-height: 1.16; letter-spacing: -.035em; margin: 0 0 12px; }
+.project-price-label { font-size: 12px; margin: 0 0 2px; }
+.project-price { font-size: 28px; line-height: 1.1; font-weight: 700; margin: 0 0 16px; }
+.project-location { display: flex; gap: 9px; align-items: center; font-size: 13px; font-weight: 500; line-height: 1.5; margin: 0 0 15px; }
+.project-location > span { font-size: 24px; }
+.project-facts { display: flex; flex-wrap: wrap; gap: 10px 18px; list-style: none; padding: 0; margin: 0 0 20px; font-size: 13px; }
+.project-facts li + li { border-left: 1px solid #ffffff60; padding-left: 18px; }
+.project-actions { display: flex; gap: 12px; }
+.project-actions > a, .project-actions > button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; flex: 1; min-height: 44px; padding: 10px 8px; border: 1px solid #ffffff65; border-radius: 0; background: #ffffff20; backdrop-filter: blur(12px); color: inherit; font: inherit; font-size: 13px; font-weight: 600; text-align: center; }
+.project-actions > :is(a, button):hover { background: #ffffff40; }
+.project-actions > :is(a, button):focus-visible { outline: 2px solid white; outline-offset: 3px; }
+.project-dialog { width: min(800px, 100%); max-width: 100%; max-height: 90dvh; border: 0; border-radius: 0; padding: 0; background: #fafaf8; color: #20271f; overflow-y: auto; overscroll-behavior: contain; }
+.project-dialog::backdrop { background: #101a16a8; backdrop-filter: blur(5px); }
+.project-dialog-top { position: sticky; top: 0; z-index: 2; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 18px 25px; background: #fafaf8; }
+.project-dialog-top button { min-height: 44px; padding: 8px 14px; border: 1px solid #b5bcaf; background: transparent; }
+.project-dialog-image { position: relative; aspect-ratio: 16 / 9; }
+.project-dialog-image img { object-fit: cover; }
+.project-dialog-copy { padding: 25px; }
+.project-dialog-copy h2 { font-size: clamp(28px, 4vw, 44px); letter-spacing: -.04em; font-weight: 500; margin: 15px 0; }
+.project-dialog-copy > p { line-height: 1.6; }
+.project-dialog-price { font-size: 30px; font-weight: 600; }
+.project-dialog-copy dl { display: flex; flex-wrap: wrap; gap: 30px; border-block: 1px solid #d8dbd5; padding: 20px 0; }
+.project-dialog-copy dt { font-size: 13px; color: #656d60; }
+.project-dialog-copy dd { margin: 8px 0 0; }
+.project-dialog .project-actions > a { flex: none; background: #20271f; color: white; padding-inline: 25px; }
+.project-image-note { font-size: 12px; color: #656d60; }
+@media (max-width: 1100px) { .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; } }
+@media (max-width: 700px) { .projects-grid { grid-template-columns: 1fr; } .project-card { min-height: 530px; } .project-badges { inset: 20px 20px auto; } .project-card-copy { inset: auto 20px 20px; } }
+@media (prefers-reduced-motion: reduce) { .project-card > img { transition: none; } .project-card:hover > img { transform: none; } }

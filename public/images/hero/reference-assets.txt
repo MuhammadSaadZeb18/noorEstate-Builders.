@@ -1,0 +1,9 @@
+Reference hero layers from the public FIND Real Estate homepage, downloaded to match the user-supplied sequence screenshots.
+https://www.findrealestate.com/_next/static/media/back.f53e9773.jpg
+https://www.findrealestate.com/_next/static/media/house.8ed9b3db.png
+https://www.findrealestate.com/_next/static/media/cloud.c8800fa9.png
+https://www.findrealestate.com/_next/static/media/smoke.9f683cb4.png
+
+Delivery WebP assets preserve transparency and are resized/encoded locally. Source download URLs are recorded above; large original downloads are excluded from public assets. These are reference visuals, not a Noor property listing or a claim about a real project.
+The hero uses independent sky, building, cloud, and smoke layers; outlined NOOR lettering; an inverse SVG letter mask revealing the live building; and a cloud/white exit. All timeline stages are controlled by ScrollTrigger progress with scrub:true. No autoplay.
+Brand: Noor Estate & Builders, supplied by the user. Domain: https://www.noorestatebuilders.com.

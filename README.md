@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Noor Estate & Builders
 
-## Getting Started
+A single-page real estate website built with Next.js 16.4.1, React 19, TypeScript, Tailwind CSS 4, GSAP/ScrollTrigger, and Lenis. Property filtering and detail galleries run in the browser against local data. There is no database, authentication, CMS, or submission service.
 
-First, run the development server:
+## Run and verify
 
-```bash
+Use npm and the existing lockfile. The property test command uses Node's native TypeScript stripping; Node 22.18+ or Node 24 is recommended.
+
+```sh
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run lint
+npm run test:properties
+npm run build
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Content
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `data/site.ts`: brand, navigation, hero, and company copy.
+- `data/homepage.ts`: services, process, neighborhoods, example team, sample testimonials, FAQs, and confirmed contact details.
+- `data/properties.ts`: typed sample inventory, gallery records, locations, and filter defaults. Prices are USD; rents are monthly. Studio means zero bedrooms; numbered bedroom filters mean that many or more.
+- `public/images/`: local imagery and source/asset notes. The hero WebP is the optimized delivery asset; its original PNG is retained.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Team profiles, testimonials, inventory, and some photography are explicitly illustrative. Replace these with approved business material before a public business launch. The confirmed brand is Noor Estate & Builders, with the supplied domain https://www.noorestatebuilders.com.
 
-## Learn More
+## Behavior
 
-To learn more about Next.js, take a look at the following resources:
+Header/footer links use homepage anchors. Service and neighborhood links also update the property filters. Details open in a native modal with Escape, focus restoration, keyboard gallery controls, background scroll locking, and its own scrolling surface.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+One `MotionProvider` coordinates Lenis with GSAP's ticker. Touch scrolling remains native. The hero follows the supplied screenshot sequence: rising/scaling building, fading headline, outlined NOOR logo, live building revealed through the lettering, then a cloud-to-white exit. It uses CSS sticky positioning with one reversible ScrollTrigger timeline and `scrub: true`; no stage plays automatically. Mobile uses shorter travel and a shorter scroll range. Reduced-motion preferences disable smoothing and choreography, including live preference changes. Animation styles are applied only after initialization, so server-rendered content stays readable if scripts fail.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The enquiry form creates a local draft. Copying copies only to the clipboard; email/WhatsApp links open the visitor's own app. The site does not send or confirm delivery. Contact configuration is in `data/homepage.ts`.
 
-## Deploy on Vercel
+## Metadata and assets
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The site includes a custom icon, Apple touch icon, and static Open Graph/Twitter preview images. `public/social-preview.svg` is the editable source. Set the `SITE_URL` environment variable to the real deployment origin before a production build so social images use that domain. The supplied Noor domain is the default metadata origin. Override it with `SITE_URL` for another deployment.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Follow `AGENTS.md` and the installed documentation in `node_modules/next/dist/docs/` before changing Next.js APIs. Persistent Turbopack dev/build caching is disabled because the experimental CSS loader retained removed style declarations during verification. The building uses a width-driven image with its natural aspect ratio so a stale fixed-height declaration cannot shrink the entire tower into the viewport.
+
+Browser QA has been performed with headless Chrome. Safari/iOS and real-device checks remain manual; browser emulation does not substitute for those checks.
