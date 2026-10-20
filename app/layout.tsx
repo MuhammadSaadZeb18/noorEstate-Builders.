@@ -3,6 +3,9 @@ import { Instrument_Sans } from "next/font/google";
 import "./globals.css";
 import "./hero.css";
 import "./services.css";
+import "./theme.css";
+import "./whatsapp.css";
+import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
 
 const instrumentSans = Instrument_Sans({
   variable: "--font-instrument-sans",
@@ -16,13 +19,13 @@ export const metadata: Metadata = {
   description: "Thoughtful spaces, personal guidance, and a new perspective on real estate. Find a place that feels like you.",
   applicationName: "Noor Estate & Builders",
   openGraph: {
-    title: "Noor Estate & Builders — Find What Moves You",
+    title: "Noor Estate & Builders",
     description: "Thoughtful spaces. Personal guidance. A considered perspective on real estate.",
     siteName: "Noor Estate & Builders",
     type: "website",
   },
   twitter: { card: "summary_large_image" },
-  icons: { icon: "/icon.svg", apple: "/apple-icon.png" },
+  icons: { icon: "/fav.png", apple: "/fav.png" },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -31,7 +34,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={instrumentSans.variable}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <WhatsAppFloat />
+      </body>
     </html>
   );
 }

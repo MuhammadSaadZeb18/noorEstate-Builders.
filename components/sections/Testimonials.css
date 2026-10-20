@@ -2,13 +2,13 @@
 #testimonials .testimonial-story > .eyebrow,
 #testimonials .story-attribution,
 #testimonials .content-disclosure {
-  color: #aebba3;
+  color: #b8b8b8;
 }
 
-#testimonials .section-dot { background: #a5b698; }
-#testimonials .quote-mark { color: #a5b698; }
-#testimonials .testimonial-bottom { border-color: #4d5b44; }
-#testimonials .round-arrow { color: #e3e8de; border-color: #717e65; }
+#testimonials .section-dot { background: #ef4444; }
+#testimonials .quote-mark { color: #ef4444; }
+#testimonials .testimonial-bottom { border-color: #565656; }
+#testimonials .round-arrow { color: #f5f5f5; border-color: #797979; }
 
 /* Reserve the tallest quote's space at every viewport width and font size. */
 #testimonials .testimonial-stage { display: grid; min-width: 0; }

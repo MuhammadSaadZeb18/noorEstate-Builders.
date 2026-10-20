@@ -1,0 +1,81 @@
+/* Shared palette. This stylesheet changes colors only. */
+:root {
+  --background: #fafafa;
+  --foreground: #171717;
+  --muted: #666666;
+  --line: #dedede;
+  --accent: #dc2626;
+  --accent-hover: #b91c1c;
+  --surface-dark: #111111;
+  --on-dark: #f5f5f5;
+}
+
+body .process-section, body .contact-section { background: #f5f5f5; }
+body .editorial-heading h2 > span, body .process-intro h2 > span, body .faq-layout h2 > span, body .property-section-heading h2 span { color: #888888; }
+body .closing-title { color: #a3a3a3; }
+body .banner-ink { color: #171717; }
+body .about-detail, body .process-intro > p, body .process-step p, body .agent-bio, body .listing-disclosure, body .content-disclosure { color: #666666; }
+body .property-empty, body .property-cover, body .gallery-main, body .gallery-thumbnails button, body .agent-portrait { background: #eeeeee; }
+body .filter-fields select, body .filter-fields input, body .process-step, body .contact-methods a { border-color: #d0d0d0; }
+body .property-detail-description > p:last-child, body .property-amenities li { color: #666666; }
+body .property-amenities li span { color: var(--accent); }
+body .service-copy p, body .services-section .section-number { color: #b8b8b8; }
+body .services-section .section-dot { background: #ef4444; }
+body .services-section, body .site-footer, body .testimonials-section, body .reels-section { background: var(--surface-dark); color: var(--on-dark); }
+body .section-dot, body .status-dot { background: var(--accent); }
+body .contact-flourish, body .footer-wordmark { color: var(--accent); }
+body .process-intro h2 > span { color: var(--accent); }
+body .process-section .step-number { color: #171717; }
+body .hero-search, body .enquiry-submit { background: var(--accent); color: white; border-color: var(--accent); }
+body .hero-search:hover, body .enquiry-submit:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+body .header-cta { background: #111111; border-color: #111111; color: white; }
+body .transaction-switch { background: #eeeeee; }
+body .transaction-switch input:checked + span { background: var(--accent); color: white; }
+body .property-featured { background: #dc2626e6; color: white; }
+body .footer-socials a { border-color: #737373; }
+body .footer-socials a:hover, body .footer-top nav a:hover { color: #f87171; }
+body .footer-top nav a span { color: #f87171; }
+body .footer-bottom, body .footer-back .round-arrow { border-color: #525252; }
+body .footer-bottom, body .footer-top > div > p { color: #b8b8b8; }
+body .site-footer .brand-mark > span { color: #bdbdbd; }
+body .services-showcase-heading h2 span, body .services-showcase-footer > p > span { color: #aaaaaa; }
+body .service-option, body .service-option:last-child { border-color: #525252; }
+body .services-showcase-footer > a { border-color: #aaaaaa; }
+body .service-option-media::after { background: #111111a6; }
+#testimonials .section-number, #testimonials .testimonial-story > .eyebrow, #testimonials .story-attribution, #testimonials .content-disclosure { color: #b8b8b8; }
+#testimonials .quote-mark { color: #ef4444; }
+#testimonials .testimonial-bottom { border-color: #525252; }
+#testimonials .round-arrow { color: #f5f5f5; border-color: #737373; }
+body .reels-section { border-color: #525252; }
+body .project-dialog .project-actions > a { background: var(--accent); color: white; }
+body .contact-methods a > span:first-child { color: #b91c1c; }
+body .enquiry-form input, body .enquiry-form select, body .enquiry-form textarea { color: #171717; border-color: #aaaaaa; }
+body .enquiry-form label > span, body .enquiry-note, body .enquiry-form-top .eyebrow { color: #666666; }
+body .enquiry-form textarea::placeholder { color: #666666; }
+body .enquiry-preview textarea { background: #ffffff80; border-color: #aaaaaa; }
+body .enquiry-preview > p { color: #666666; }
+body .draft-actions button, body .draft-actions a { border-color: #777777; }
+body :is(a, button, summary, select, input, textarea):focus-visible { outline-color: var(--accent); }
+body #mobile-navigation::backdrop { background-color: #11111180; }
+body #mobile-navigation[data-phase="closing"]::backdrop { background-color: #11111100; }
+@starting-style { body #mobile-navigation[open]::backdrop { background-color: #11111100; } }
+::selection { background: #fee2e2; color: #171717; }
+
+/* Smooth red hover states for dark and outlined action buttons. */
+body .property-open-arrow { transition: background-color .3s ease, border-color .3s ease, color .3s ease; }
+body .property-open-arrow:hover, body .property-open:focus-visible .property-open-arrow { background: var(--accent); border-color: var(--accent); color: white; }
+body :is(.header-cta, .hero-search, .enquiry-submit, .services-showcase-footer > a, .project-actions > a, .project-actions > button, .property-empty > button, .testimonial-controls > button, .gallery-controls > button) {
+  transition: background-color .3s ease, border-color .3s ease, color .3s ease;
+}
+body :is(.header-cta, .services-showcase-footer > a, .project-actions > a, .project-actions > button, .property-empty > button, .testimonial-controls > button, .gallery-controls > button):is(:hover, :focus-visible) {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+body #testimonials .round-arrow:is(:hover, :focus-visible) { background: var(--accent); border-color: var(--accent); color: white; }
+body :is(.menu-toggle, .close-menu, .property-close, .reset-filters) { transition: color .3s ease; }
+body :is(.menu-toggle, .close-menu, .property-close, .reset-filters):is(:hover, :focus-visible) { color: var(--accent); }
+@media (prefers-reduced-motion: reduce) {
+  body .property-open-arrow { transition: none; }
+  body :is(.header-cta, .hero-search, .enquiry-submit, .services-showcase-footer > a, .project-actions > a, .project-actions > button, .property-empty > button, .testimonial-controls > button, .gallery-controls > button, .menu-toggle, .close-menu, .property-close, .reset-filters) { transition: none; }
+}

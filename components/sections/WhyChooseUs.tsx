@@ -8,7 +8,7 @@ export function WhyChooseUs() {
     <div className="why-bottom">
       <video
         aria-label="Margalla Enclave Underpass — Noor Estate & Builders"
-        style={{ display: "block", width: "100%", aspectRatio: "16 / 9", background: "#20271f", objectFit: "contain" }}
+        style={{ display: "block", width: "100%", aspectRatio: "16 / 9", background: "#111111", objectFit: "contain" }}
         autoPlay
         muted
         loop

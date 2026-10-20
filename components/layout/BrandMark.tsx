@@ -1,5 +1,10 @@
+
 import { site } from "@/data/site";
+import Image from "next/image";
 
 export function BrandMark() {
-  return <span className="brand-mark"><strong>{site.shortName}</strong><span>Estate &amp; Builders</span></span>;
+  return(
+    <Image src ="/images/Golden Noor Estate & Builders Logo.png" alt={`${site.name} Logo`} width={200} height={100} />
+  ) 
+    
 }

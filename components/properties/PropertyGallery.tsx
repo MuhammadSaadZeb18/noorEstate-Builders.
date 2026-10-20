@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import type { PropertyImage } from "@/types/property";
 
-export function PropertyGallery({ images, title }: { images: PropertyImage[]; title: string }) {
+export function PropertyGallery({ images, title }: { images: readonly PropertyImage[]; title: string }) {
   const [index, setIndex] = useState(0);
   const move = (direction: number) => setIndex((current) => (current + direction + images.length) % images.length);
   return (

@@ -1,8 +1,8 @@
 #mobile-navigation { overflow-y: auto; overscroll-behavior: contain; }
-#mobile-navigation::backdrop { background: #19201980; backdrop-filter: blur(8px); transition: background-color .45s ease, backdrop-filter .45s ease; }
-#mobile-navigation[data-phase="closing"]::backdrop { background: #19201900; backdrop-filter: blur(0); }
+#mobile-navigation::backdrop { background: #1e1e1e80; backdrop-filter: blur(8px); transition: background-color .45s ease, backdrop-filter .45s ease; }
+#mobile-navigation[data-phase="closing"]::backdrop { background: #1e1e1e00; backdrop-filter: blur(0); }
 @starting-style {
-  #mobile-navigation[open]::backdrop { background: #19201900; backdrop-filter: blur(0); }
+  #mobile-navigation[open]::backdrop { background: #1e1e1e00; backdrop-filter: blur(0); }
 }
 @media (prefers-reduced-motion: reduce) {
   #mobile-navigation::backdrop { transition: none; }

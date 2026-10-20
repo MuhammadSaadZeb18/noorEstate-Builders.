@@ -2,11 +2,11 @@
 .services-showcase-heading { display: grid; grid-template-columns: 40% 1fr; padding: 95px var(--gutter) 85px; }
 .services-label { margin: 5px 0 0; font-size: 14px; font-weight: 600; }
 .services-showcase-heading h2 { margin: 0; font-size: clamp(36px, 3.2vw, 60px); font-weight: 500; line-height: 1.04; letter-spacing: -.055em; }
-.services-showcase-heading h2 span { color: #9ba995; }
-.service-option { position: relative; display: block; isolation: isolate; border-top: 1px solid #596454; overflow: hidden; color: inherit; }
-.service-option:last-child { border-bottom: 1px solid #596454; }
+.services-showcase-heading h2 span { color: #a5a5a5; }
+.service-option { position: relative; display: block; isolation: isolate; border-top: 1px solid #616161; overflow: hidden; color: inherit; }
+.service-option:last-child { border-bottom: 1px solid #616161; }
 .service-option-media { position: absolute; inset: 0; z-index: -1; opacity: 0; transition: opacity .45s ease; }
-.service-option-media::after { content: ""; position: absolute; inset: 0; background: #101a13a6; }
+.service-option-media::after { content: ""; position: absolute; inset: 0; background: #171717a6; }
 .service-option-media img { object-fit: cover; object-position: center; transform: scale(1.04); transition: transform .7s ease; }
 .service-option-content { display: grid; grid-template-columns: 40px calc(40% - 100px) 1fr clamp(60px, 9vw, 170px); column-gap: 30px; align-items: start; min-height: 280px; padding: 42px var(--gutter) 48px; }
 .service-option-number { display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid currentColor; border-radius: 50%; font-size: 13px; font-weight: 500; }
@@ -19,11 +19,11 @@
 .service-option:is(:hover, :focus-visible) .service-option-media img { transform: scale(1); }
 .service-option:is(:hover, :focus-visible) .service-option-title > span::after { transform: scaleX(1); }
 .service-option:is(:hover, :focus-visible) .service-option-arrow { opacity: 1; transform: translateX(0); }
-.service-option:focus-visible { outline: 2px solid #f1f3ed; outline-offset: -5px; }
+.service-option:focus-visible { outline: 2px solid #f2f2f2; outline-offset: -5px; }
 .services-showcase-footer { padding: 60px var(--gutter) 80px; }
 .services-showcase-footer > p { max-width: 900px; margin: 0 0 36px; font-size: clamp(27px, 2.7vw, 48px); line-height: 1.12; letter-spacing: -.04em; }
-.services-showcase-footer > p > span { color: #9ba995; }
-.services-showcase-footer > a { display: inline-flex; align-items: center; gap: 24px; padding: 15px 24px; border: 1px solid #9ba995; border-radius: 40px; font-size: 16px; }
+.services-showcase-footer > p > span { color: #a5a5a5; }
+.services-showcase-footer > a { display: inline-flex; align-items: center; gap: 24px; padding: 15px 24px; border: 1px solid #a5a5a5; border-radius: 40px; font-size: 16px; }
 .services-showcase-footer > a svg { width: 24px; height: 24px; }
 @media (max-width: 1000px) {
   .service-option-content { grid-template-columns: 32px calc(40% - 72px) 1fr 70px; gap: 20px; min-height: 250px; }

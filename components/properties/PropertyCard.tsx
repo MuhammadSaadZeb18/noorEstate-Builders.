@@ -1,4 +1,5 @@
 import Image from "next/image";
+import "./PropertyCard.css";
 import type { Property } from "@/types/property";
 import { bedroomLabel, formatPrice } from "@/lib/formatters";
 
@@ -11,7 +12,7 @@ export function PropertyCard({ property, onOpen }: { property: Property; onOpen:
         {property.featured && <span className="property-featured">Selected by Noor</span>}
       </div>
       <div className="property-card-meta"><p>{property.neighborhood}</p><p>{formatPrice(property)}</p></div>
-      <h3><button type="button" className="property-open" aria-haspopup="dialog" aria-controls="property-details" aria-describedby={`facts-${property.id}`} onClick={(event) => onOpen(property, event.currentTarget)}>{property.title}<span className="property-open-arrow" aria-hidden="true">↗</span></button></h3>
+      <div className="property-card-heading"><h3>{property.title}</h3><button type="button" className="property-details-arrow" aria-label={`View details for ${property.title}`} aria-haspopup="dialog" aria-controls="property-details" aria-describedby={`facts-${property.id}`} onClick={(event) => onOpen(property, event.currentTarget)}><span aria-hidden="true">&#8599;</span></button></div>
       <p className="property-facts" id={`facts-${property.id}`}>{bedroomLabel(property.bedrooms)}<span aria-hidden="true">·</span>{property.bathrooms} bath{property.bathrooms === 1 ? "" : "s"}<span aria-hidden="true">·</span>{property.area.toLocaleString("en-US")} sq ft</p>
     </article>
   );

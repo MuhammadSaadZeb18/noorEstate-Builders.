@@ -63,7 +63,7 @@ export function PropertyListings() {
   return (
     <section ref={section} id="properties" className="property-section" tabIndex={-1} aria-labelledby="properties-title">
       <div className="section-intro"><p className="eyebrow"><span className="section-dot" />{listingContent.eyebrow}</p><span className="section-number" aria-hidden="true">(04)</span></div>
-      <div className="property-section-heading"><h2 id="properties-title">Find your<br /><span>kind of place.</span></h2><p>{listingContent.description}</p></div>
+      <div className="property-section-heading"><h2 id="properties-title">Find your<br /><span className="text-red-500!">kind of place.</span></h2><p>{listingContent.description}</p></div>
       <PropertyFilters filters={filters} error={error} onReset={reset} onChange={(key, value) => setFilters((current) => key === "transaction" ? { ...current, transaction: value as Filters["transaction"], minPrice: "", maxPrice: "" } : { ...current, [key]: value })} />
       <div className="property-results-toolbar"><p role="status" aria-live="polite" aria-atomic="true">{results.length} {results.length === 1 ? "place" : "places"} to {filters.transaction === "sale" ? "call your own" : "make yourself at home"}</p><label>Sort by<select name="sort" value={sort} onChange={(event) => setSort(event.target.value as PropertySort)}><option value="featured">Our selection</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="newest">Newest first</option></select></label></div>
       <div ref={resultsElement} className="property-results-transition">

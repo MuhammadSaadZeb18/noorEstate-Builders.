@@ -1,0 +1,15 @@
+:is(#property-details, #project-details)::backdrop {
+  background: #111111a8;
+  backdrop-filter: blur(5px);
+  transition: background-color .32s ease, backdrop-filter .32s ease;
+}
+:is(#property-details, #project-details)[data-closing="true"]::backdrop {
+  background: #11111100;
+  backdrop-filter: blur(0);
+}
+@starting-style {
+  :is(#property-details, #project-details)[open]::backdrop { background: #11111100; backdrop-filter: blur(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  :is(#property-details, #project-details)::backdrop { transition: none; }
+}

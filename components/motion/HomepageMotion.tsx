@@ -31,7 +31,7 @@ export function HomepageMotion({ children }: { children: ReactNode }) {
           });
         }
         root.querySelectorAll<HTMLElement>("[data-reveal-words]").forEach((heading) => {
-          gsap.fromTo(heading.querySelectorAll("[data-word]"), { color: "#8b9185" }, { color: "#20211f", stagger: 0.15, ease: "none", scrollTrigger: { trigger: heading, start: "top 85%", end: "bottom 45%", scrub: true } });
+          gsap.fromTo(heading.querySelectorAll("[data-word]"), { color: "#8f8f8f" }, { color: "#171717", stagger: 0.15, ease: "none", scrollTrigger: { trigger: heading, start: "top 85%", end: "bottom 45%", scrub: true } });
         });
         root.querySelectorAll<HTMLElement>("[data-uncover]").forEach((image) => {
           gsap.fromTo(image, { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 1.1, ease: "power3.inOut", scrollTrigger: { trigger: image, start: "top 90%", once: true } });

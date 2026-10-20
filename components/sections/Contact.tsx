@@ -6,12 +6,14 @@ import { contactContent, contactDetails } from "@/data/homepage";
 export function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [interest, setInterest] = useState("Buying");
   const [message, setMessage] = useState("");
   const [prepared, setPrepared] = useState(false);
   const [copyStatus, setCopyStatus] = useState("");
   const preview = useRef<HTMLTextAreaElement>(null);
-  const draft = `Hello Noor Estate & Builders,\n\nI’m interested in: ${interest.toLowerCase()}.\n\n${message.trim()}\n\n${name.trim()}${email.trim() ? `\nReply to: ${email.trim()}` : ""}`;
+  const draft = `Hello Noor Estate & Builders,\n\nI’m interested in: ${interest.toLowerCase()}.\n\n${message.trim()}\n\n${name.trim()}
+Phone: ${phone.trim()}${email.trim() ? `\nReply to: ${email.trim()}` : ""}`;
   const hasContact = !!(contactDetails.email || contactDetails.phone || contactDetails.whatsapp);
   const update = (setValue: (value: string) => void, value: string) => { setValue(value); setPrepared(false); setCopyStatus(""); };
 
@@ -27,10 +29,13 @@ export function Contact() {
       <form className="enquiry-form" onSubmit={(event) => {
         event.preventDefault();
         const form = event.currentTarget;
-        for (const fieldName of ["enquiry-name", "enquiry-message"]) {
+        for (const fieldName of ["enquiry-name", "enquiry-phone", "enquiry-message"]) {
           const field = form.elements.namedItem(fieldName) as HTMLInputElement | HTMLTextAreaElement;
           field.setCustomValidity(field.value.trim() ? "" : "Please enter more than just spaces.");
         }
+        const phoneField = form.elements.namedItem("enquiry-phone") as HTMLInputElement;
+        const digits = phone.replace(/\D/g, "");
+        phoneField.setCustomValidity(digits.length >= 7 && digits.length <= 15 && /^[+\d\s().-]+$/.test(phone.trim()) ? "" : "Enter a phone number with 7 to 15 digits.");
         if (!form.reportValidity()) return;
         setPrepared(true); setCopyStatus(""); requestAnimationFrame(() => preview.current?.focus());
       }} onInput={(event) => {
@@ -40,6 +45,7 @@ export function Contact() {
         <div className="enquiry-form-top"><h3>Your next chapter</h3><span className="eyebrow">Enquiry draft</span></div>
         <div className="enquiry-fields"><label>Your name<input name="enquiry-name" autoComplete="name" value={name} required maxLength={120} onChange={(event) => update(setName, event.target.value)} /></label><label>Email <span>(optional)</span><input name="enquiry-email" type="email" autoComplete="email" value={email} maxLength={254} onChange={(event) => update(setEmail, event.target.value)} /></label></div>
         <label>I’m thinking about<select name="enquiry-interest" value={interest} onChange={(event) => update(setInterest, event.target.value)}><option>Buying</option><option>Renting</option><option>Selling</option><option>Something else</option></select></label>
+        <label>Phone number<input name="enquiry-phone" type="tel" inputMode="tel" autoComplete="tel" value={phone} required maxLength={32} placeholder="+92 333 1234567" onChange={(event) => update(setPhone, event.target.value)} /></label>
         <label>What do you have in mind?<textarea name="enquiry-message" rows={3} value={message} required maxLength={3000} placeholder="An area you love, a little more space, a fresh start…" onChange={(event) => update(setMessage, event.target.value)} /></label>
         <p className="enquiry-note">Prepare a draft to copy{contactDetails.email || contactDetails.whatsapp ? " or send from your own app" : " and keep"}. Nothing is submitted or sent by this website.</p>
         <button type="submit" className="enquiry-submit">Prepare my enquiry<span aria-hidden="true">↗</span></button>

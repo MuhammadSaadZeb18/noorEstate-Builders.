@@ -96,7 +96,7 @@ export function Hero() {
       <div className="hero-sky"><Image src={sky} alt="" fill sizes="100vw" loading="eager" fetchPriority="high" unoptimized /></div>
       <div className="hero-cloud hero-cloud-back" aria-hidden="true"><Image src={cloud} alt="" fill sizes="70vw" loading="eager" /></div>
       <div className="hero-copy">
-        <h1 id="hero-title">{site.hero.headline}</h1>
+        <h1 id="hero-title">{site.hero.headline.split(" ").map((word, index) => <span key={index} style={{ color: word === "PLACE" ? "#dc2626" : "#111111" }}>{index > 0 ? " " : ""}{word}</span>)}</h1>
         <p className="hero-subtitle"><span>{site.hero.lead}</span> {site.hero.support}</p>
         <a className="hero-search" href="#properties">Find Properties <span aria-hidden="true">→</span></a>
       </div>

@@ -4,10 +4,12 @@ export const site = {
     socialLinks: [
         { label: "Facebook", href: "https://www.facebook.com/noorestateandbuilders1" },
         { label: "TikTok", href: "https://www.tiktok.com/@noor_estates" },
+        { label: "Instagram", href: "https://www.instagram.com/noorestateandbuilders1" },
+        { label: "YouTube", href: "https://www.youtube.com/@noorestateandbuilders" },
     ],
     navigation: [{ label: "Search", href: "#properties" }, { label: "Projects", href: "#projects" }, { label: "Agents", href: "#team" }, { label: "Services", href: "#services" }, { label: "Properties", href: "#properties" }, { label: "About", href: "#about" }],
     hero: {
-        headline: "Find What Moves You",
+        headline: "A PLACE TO CALL HOME",
         lead: "Expert agents. Real guidance.",
         support: "A clear path to find what’s next.",
         eyebrow: "A new perspective on real estate",

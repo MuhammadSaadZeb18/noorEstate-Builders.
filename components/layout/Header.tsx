@@ -80,7 +80,9 @@ export function Header() {
     }, []);
 
     return (<header ref={header} className="site-header">
-      <a className="wordmark" href="#home" aria-label={`${site.name} home`}><BrandMark /></a>
+      <a className="wordmark" href="#home" aria-label={`${site.name} home`}><BrandMark />
+      
+      </a>
       <nav className="desktop-navigation" aria-label="Main navigation">{site.navigation.map((link) => <a key={link.label} href={link.href}>{link.label}</a>)}</nav>
       <a className="header-cta" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
       <button ref={trigger} className="menu-toggle" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="mobile-navigation" onClick={openMenu}>Menu <span aria-hidden="true">☰</span></button>

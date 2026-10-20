@@ -38,7 +38,7 @@ export function Testimonials() {
     pending.current = { direction };
     gsap.to(element, { opacity: 0, x: -direction * 14, duration: 0.22, ease: "power2.in", onComplete: changeStory });
   })();
-  return <section id="testimonials" className="testimonials-section page-section" style={{ background: "#20271f", color: "#e3e8de" }} tabIndex={-1} aria-labelledby="testimonials-title">
+  return <section id="testimonials" className="testimonials-section page-section" style={{ background: "#111111", color: "#f5f5f5" }} tabIndex={-1} aria-labelledby="testimonials-title">
     <SectionLabel label={testimonialContent.eyebrow} number="09" />
     <h2 id="testimonials-title" className="sr-only">{testimonialContent.title}</h2>
     <div className="testimonial-layout">
